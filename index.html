@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Real Lyfe RP — Join Now</title>
+  <meta name="description" content="Join Real Lyfe RP — click to launch FiveM or copy the F8 connect command." />
+  <style>
+    :root {
+      --teal:#0f766e;
+      --gold:#eab308;
+      --ink:#0b1113;
+      --paper:#ffffff;
+      --muted:#94a3b8;
+    }
+    * { box-sizing:border-box }
+    html,body {
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+      background: linear-gradient(180deg, #061315, #0a1f22);
+      color:#e6f4f1;
+    }
+    a { color: var(--gold); }
+    .wrap { max-width: 1100px; margin:0 auto; padding: 28px 18px; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; color:#e6f4f1; }
+    .brand img { width:40px; height:40px; }
+    .brand span { font-weight:900; letter-spacing:.3px; }
+    .button {
+      display:inline-flex; align-items:center; gap:10px; padding:14px 20px;
+      border-radius:14px; background:var(--teal); color:#fff; text-decoration:none;
+      font-weight:800; box-shadow:0 10px 24px rgba(0,0,0,.25); transition: transform .15s ease;
+      border:1px solid rgba(255,255,255,.07);
+    }
+    .button:hover { transform: translateY(-1px); }
+    .button.gold { background: var(--gold); color:#111; }
+    .hero { display:grid; grid-template-columns: 1.1fr 0.9fr; gap:24px; align-items:center; padding:40px 0 20px; }
+    @media (max-width: 860px) { .hero { grid-template-columns:1fr; } }
+    .card {
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px; padding:18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+    }
+    .headline { font-size:clamp(28px, 6vw, 44px); line-height:1.05; margin:10px 0 12px; font-weight:900; }
+    .sub { color:#cfe9e5; opacity:.9; }
+    .stack { display:flex; flex-wrap:wrap; gap:12px; }
+    .status { font-weight:700 }
+    .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+    @media (max-width: 860px) { .grid { grid-template-columns:1fr; } }
+    .footer { margin:40px 0 12px; opacity:.7; font-size:14px; }
+    code,kbd { background:rgba(255,255,255,.08); padding:2px 6px; border-radius:6px; }
+    .tiny { font-size:12px; opacity:.8 }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="#">
+        <img src="assets/logo-placeholder.svg" alt="Real Lyfe RP logo" />
+        <span>Real Lyfe RP</span>
+      </a>
+      <div class="stack">
+        <a class="button" href="fivem://connect/cfx.re/join/ABCD12" id="joinLink">Launch & Join</a>
+        <button class="button gold" id="copyF8">Copy F8 Command</button>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="card">
+        <div class="headline">Jump into Real Lyfe RP in one click.</div>
+        <p class="sub">Click <strong>Launch & Join</strong> to open FiveM and connect to the city. If your browser asks for permission to open FiveM, allow it.</p>
+        <div style="height:10px"></div>
+        <div class="stack">
+          <a class="button" href="fivem://connect/cfx.re/join/ABCD12" id="joinLink2">Play Now</a>
+          <a class="button" href="#howto">How to Join</a>
+        </div>
+        <div style="height:14px"></div>
+        <div id="fivemHelp" style="display:none">
+          Didn’t open? Make sure FiveM is installed. Or press <kbd>F8</kbd> in FiveM and paste:
+          <code>connect cfx.re/join/ABCD12</code>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+          <div>
+            <div style="font-weight:900; letter-spacing:.3px">Server Status</div>
+            <div class="tiny">Auto-refreshes every 10s</div>
+          </div>
+          <div class="status" id="statusLine">Checking…</div>
+        </div>
+        <div style="height:10px"></div>
+        <div class="grid">
+          <div class="cell card" style="padding:12px">
+            <div class="tiny">Hostname</div>
+            <div id="hostname">—</div>
+          </div>
+          <div class="cell card" style="padding:12px">
+            <div class="tiny">Players</div>
+            <div><span id="online">—</span>/<span id="max">—</span></div>
+          </div>
+          <div class="cell card" style="padding:12px">
+            <div class="tiny">Direct IP</div>
+            <div><code>YOUR.IP.HERE:30120</code></div>
+          </div>
+        </div>
+        <div style="height:10px"></div>
+        <div class="tiny">If numbers don’t load in your browser, deploy the provided <code>server.js</code> or <code>status.php</code> proxy and change <code>STATUS_ENDPOINT</code> below.</div>
+      </div>
+    </section>
+
+    <section class="card" id="howto" style="margin-top:22px;">
+      <h3 style="margin:6px 0 8px">How to Join</h3>
+      <ol>
+        <li>Install FiveM on your PC.</li>
+        <li>Click <strong>Launch & Join</strong> above.</li>
+        <li>If it doesn’t open, press <kbd>F8</kbd> in FiveM and type <code>connect cfx.re/join/ABCD12</code>.</li>
+      </ol>
+      <p class="tiny">Tip: Bookmark this page so you can join faster next time.</p>
+    </section>
+
+    <div class="footer">© Real Lyfe RP</div>
+  </div>
+
+  <script>
+    // ------- Replace this if you deploy a proxy (server.js or status.php) -------
+    // Browser direct fetch (may fail due to CORS). Works if allowed by your host:
+    const DIRECT_INFO = "http://YOUR.IP.HERE:30120/info.json";
+    const DIRECT_PLAYERS = "http://YOUR.IP.HERE:30120/players.json";
+
+    // If you deploy a proxy, set e.g. const STATUS_ENDPOINT = "/status.json" or "/status.php"
+    const STATUS_ENDPOINT = null;
+
+    async function fetchStatus() {
+      try {
+        let hostname, max, online;
+        if (STATUS_ENDPOINT) {
+          const r = await fetch(STATUS_ENDPOINT, {cache:'no-store'});
+          const s = await r.json();
+          if (s.error) throw new Error("offline");
+          hostname = s.hostname || "Server";
+          max = s.max || null;
+          online = s.online || 0;
+        } else {
+          const [infoRes, playersRes] = await Promise.all([
+            fetch(DIRECT_INFO, {cache:'no-store'}),
+            fetch(DIRECT_PLAYERS, {cache:'no-store'})
+          ]);
+          const info = await infoRes.json();
+          const players = await playersRes.json();
+          hostname = info?.vars?.sv_hostname || "Server";
+          max = info?.vars?.sv_maxClients || null;
+          online = Array.isArray(players) ? players.length : 0;
+        }
+
+        document.getElementById('hostname').textContent = hostname;
+        document.getElementById('max').textContent = max ?? '—';
+        document.getElementById('online').textContent = online;
+        document.getElementById('statusLine').textContent = online>0 ? 'Online' : 'Online (0)';
+      } catch (e) {
+        document.getElementById('statusLine').textContent = 'Offline';
+      }
+    }
+    fetchStatus();
+    setInterval(fetchStatus, 10000);
+
+    // Fallback help reveal if protocol was blocked
+    const reveal = () => setTimeout(() => {
+      const el = document.getElementById('fivemHelp');
+      if (el) el.style.display = 'block';
+    }, 1500);
+    document.getElementById('joinLink').addEventListener('click', reveal);
+    document.getElementById('joinLink2').addEventListener('click', reveal);
+
+    // Copy F8 command
+    document.getElementById('copyF8').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('connect cfx.re/join/ABCD12');
+        const b = document.getElementById('copyF8');
+        const old = b.textContent;
+        b.textContent = 'Copied!';
+        setTimeout(() => b.textContent = old, 1200);
+      } catch (e) {}
+    });
+  </script>
+</body>
+</html>
