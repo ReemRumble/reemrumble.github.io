@@ -3,186 +3,93 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Real Lyfe RP — Join Now</title>
-  <meta name="description" content="Join Real Lyfe RP — click to launch FiveM or copy the F8 connect command." />
+  <title>Real Lyfe RP — Official Site</title>
+  <meta name="description" content="Join Real Lyfe RP in one click. Shop our Tebex stores for in-game packages and scripts. Follow us on TikTok, Discord, Instagram, and YouTube." />
+  <link rel="icon" href="assets/7BD3C50C-505B-4C06-BD8C-DA399C4FBADE.jpeg" />
   <style>
-    :root {
-      --teal:#0f766e;
-      --gold:#eab308;
-      --ink:#0b1113;
-      --paper:#ffffff;
-      --muted:#94a3b8;
-    }
-    * { box-sizing:border-box }
-    html,body {
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
-      background: linear-gradient(180deg, #061315, #0a1f22);
-      color:#e6f4f1;
-    }
+    :root { --teal:#0f766e; --teal-2:#0ea5e9; --gold:#eab308; --ink:#0b1113; --muted:#9fb7b2; }
+    * { box-sizing: border-box }
+    html,body { margin:0; background: radial-gradient(1200px 600px at 50% -10%, #0b2e34, #061315); color:#e6f4f1; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji; }
     a { color: var(--gold); }
-    .wrap { max-width: 1100px; margin:0 auto; padding: 28px 18px; }
+    .wrap { max-width:1120px; margin:0 auto; padding:24px 18px; }
     .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; }
     .brand { display:flex; align-items:center; gap:12px; text-decoration:none; color:#e6f4f1; }
-    .brand img { width:40px; height:40px; }
-    .brand span { font-weight:900; letter-spacing:.3px; }
-    .button {
-      display:inline-flex; align-items:center; gap:10px; padding:14px 20px;
-      border-radius:14px; background:var(--teal); color:#fff; text-decoration:none;
-      font-weight:800; box-shadow:0 10px 24px rgba(0,0,0,.25); transition: transform .15s ease;
-      border:1px solid rgba(255,255,255,.07);
-    }
-    .button:hover { transform: translateY(-1px); }
-    .button.gold { background: var(--gold); color:#111; }
-    .hero { display:grid; grid-template-columns: 1.1fr 0.9fr; gap:24px; align-items:center; padding:40px 0 20px; }
-    @media (max-width: 860px) { .hero { grid-template-columns:1fr; } }
-    .card {
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:18px; padding:18px;
-      box-shadow: 0 10px 28px rgba(0,0,0,.25);
-    }
-    .headline { font-size:clamp(28px, 6vw, 44px); line-height:1.05; margin:10px 0 12px; font-weight:900; }
-    .sub { color:#cfe9e5; opacity:.9; }
+    .brand img { width:44px; height:44px; border-radius:10px; object-fit:cover; box-shadow:0 8px 20px rgba(0,0,0,.35)}
+    .brand span { font-weight:900; letter-spacing:.3px; font-size:18px }
     .stack { display:flex; flex-wrap:wrap; gap:12px; }
-    .status { font-weight:700 }
-    .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
-    @media (max-width: 860px) { .grid { grid-template-columns:1fr; } }
-    .footer { margin:40px 0 12px; opacity:.7; font-size:14px; }
-    code,kbd { background:rgba(255,255,255,.08); padding:2px 6px; border-radius:6px; }
+    .btn { display:inline-flex; align-items:center; gap:8px; padding:12px 16px; border-radius:12px; background:var(--teal); color:#fff; text-decoration:none; font-weight:800; box-shadow:0 12px 28px rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.08); transition: transform .15s ease, box-shadow .15s ease; }
+    .btn:hover { transform: translateY(-1px); box-shadow:0 18px 36px rgba(0,0,0,.30)}
+    .btn.gold { background:var(--gold); color:#111; }
+    .btn.ghost { background:transparent; border:1px solid rgba(255,255,255,.15) }
+    .hero { display:grid; grid-template-columns:1.1fr 0.9fr; gap:22px; align-items:center; padding:36px 0 16px; }
+    @media (max-width: 880px) { .hero { grid-template-columns:1fr; } }
+    .card { background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:20px; box-shadow: 0 10px 28px rgba(0,0,0,.25) }
+    .headline { font-size: clamp(28px, 5.5vw, 46px); line-height:1.05; margin:10px 0 12px; font-weight:900 }
+    .sub { color:#cfe9e5; opacity:.9 }
+    .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:16px }
+    @media (max-width: 880px) { .grid { grid-template-columns:1fr; } }
     .tiny { font-size:12px; opacity:.8 }
+    footer { margin:42px 0 10px; opacity:.75; font-size:14px; text-align:center }
+    .badge { font-size:12px; padding:4px 8px; border-radius:999px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.1) }
+    .social { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="nav">
       <a class="brand" href="#">
-        <img src="assets/logo-placeholder.svg" alt="Real Lyfe RP logo" />
+        <img src="assets/7BD3C50C-505B-4C06-BD8C-DA399C4FBADE.jpeg" alt="Real Lyfe RP logo" />
         <span>Real Lyfe RP</span>
       </a>
       <div class="stack">
-        <a class="button" href="fivem://connect/cfx.re/join/ABCD12" id="joinLink">Launch & Join</a>
-        <button class="button gold" id="copyF8">Copy F8 Command</button>
+        <a class="btn" href="fivem://connect/cfx.re/join/5dv79z" id="joinLink">Launch & Join</a>
+        <a class="btn gold" href="https://real-lyfe-rp.tebex.io" target="_blank" rel="noopener">Server Store</a>
+        <a class="btn ghost" href="https://real-lyfe-scripts.tebex.io" target="_blank" rel="noopener">Scripts Store</a>
       </div>
     </div>
 
     <section class="hero">
       <div class="card">
+        <div class="badge">Official Site · reallyferp.com</div>
         <div class="headline">Jump into Real Lyfe RP in one click.</div>
-        <p class="sub">Click <strong>Launch & Join</strong> to open FiveM and connect to the city. If your browser asks for permission to open FiveM, allow it.</p>
-        <div style="height:10px"></div>
-        <div class="stack">
-          <a class="button" href="fivem://connect/cfx.re/join/ABCD12" id="joinLink2">Play Now</a>
-          <a class="button" href="#howto">How to Join</a>
+        <p class="sub">Click <strong>Launch & Join</strong> to open FiveM and connect. Or press <b>F8</b> in FiveM and paste: <code>connect cfx.re/join/5dv79z</code></p>
+        <div class="stack" style="margin-top:10px">
+          <a class="btn" href="fivem://connect/cfx.re/join/5dv79z" id="joinLink2">Play Now</a>
+          <button class="btn gold" id="copyF8">Copy F8 Command</button>
         </div>
-        <div style="height:14px"></div>
-        <div id="fivemHelp" style="display:none">
-          Didn’t open? Make sure FiveM is installed. Or press <kbd>F8</kbd> in FiveM and paste:
-          <code>connect cfx.re/join/ABCD12</code>
+        <div id="fivemHelp" class="tiny" style="display:none; margin-top:10px;">Didn’t open? Make sure FiveM is installed and protocol links are allowed.</div>
+        <div class="social">
+          <a class="btn ghost" href="https://www.tiktok.com/@reallyferoleplay?_t=ZP-90fuFJuY3od&_r=1" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.7 3h3.2c.2 1.7 1.2 3 3 3.4v3.2c-1.5 0-2.9-.5-4-1.3v6.2a6.5 6.5 0 1 1-6.5-6.5c.4 0 .8.1 1.2.2V9a3.3 3.3 0 1 0 2.1 3.1V3z"/></svg> TikTok</a><a class="btn ghost" href="https://discord.gg/v4arJ8FFqG" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.369A19.79 19.79 0 0 0 16.558 3c-.2.36-.433.846-.592 1.23a18.27 18.27 0 0 0-7.932 0A7.96 7.96 0 0 0 7.442 3a19.736 19.736 0 0 0-3.759 1.369C1.312 7.197.78 9.93.932 12.629c1.58 1.176 3.12 1.893 4.62 2.37.375-.51.71-1.053.999-1.625-.548-.207-1.072-.46-1.566-.756.13-.097.257-.198.381-.303 3.008 1.408 6.27 1.408 9.246 0 .124.105.251.206.381.303-.494.296-1.018.549-1.566.756.289.572.624 1.115.999 1.625 1.5-.477 3.04-1.194 4.62-2.37.206-3.58-.597-6.288-2.729-8.26ZM9.861 12.348c-.9 0-1.635-.83-1.635-1.852 0-1.02.726-1.853 1.635-1.853.914 0 1.642.833 1.635 1.853 0 1.022-.721 1.852-1.635 1.852Zm4.278 0c-.9 0-1.635-.83-1.635-1.852 0-1.02.726-1.853 1.635-1.853.914 0 1.642.833 1.635 1.853 0 1.022-.721 1.852-1.635 1.852Z"/></svg> Discord</a><a class="btn ghost" href="https://www.instagram.com/ultimategamerlounge?igsh=MWV6NTRnOTJyMmxuaA==" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0-5c3 0 3.4 0 4.6.1 1.2.1 2 .3 2.7.7.7.4 1.3 1 1.7 1.7.4.7.6 1.5.7 2.7.1 1.2.1 1.6.1 4.6s0 3.4-.1 4.6c-.1 1.2-.3 2-.7 2.7-.4.7-1 1.3-1.7 1.7-.7.4-1.5.6-2.7.7-1.2.1-1.6.1-4.6.1s-3.4 0-4.6-.1c-1.2-.1-2-.3-2.7-.7a4.4 4.4 0 0 1-1.7-1.7c-.4-.7-.6-1.5-.7-2.7C3 15.4 3 15 3 12s0-3.4.1-4.6c.1-1.2.3-2 .7-2.7.4-.7 1-1.3 1.7-1.7.7-.4 1.5-.6 2.7-.7C8.6 2 9 2 12 2Z"/><circle cx="18" cy="6" r="1.2"/></svg> Instagram</a><a class="btn ghost" href="https://youtube.com/@uglclanrumblereem?si=xpvCtaGMMemA_S9D" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7c-.2-.9-.9-1.6-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-8.8.5c-.9.2-1.6.9-1.8 1.8C1 8.8 1 12 1 12s0 3.2.4 4.7c.2.9.9 1.6 1.8 1.8C5.7 19 12 19 12 19s6.3 0 8.8-.5c.9-.2 1.6-.9 1.8-1.8.4-1.5.4-4.7.4-4.7ZM10 15V9l5 3-5 3z"/></svg> YouTube</a>
         </div>
       </div>
 
       <div class="card">
-        <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-          <div>
-            <div style="font-weight:900; letter-spacing:.3px">Server Status</div>
-            <div class="tiny">Auto-refreshes every 10s</div>
-          </div>
-          <div class="status" id="statusLine">Checking…</div>
-        </div>
-        <div style="height:10px"></div>
-        <div class="grid">
-          <div class="cell card" style="padding:12px">
-            <div class="tiny">Hostname</div>
-            <div id="hostname">—</div>
-          </div>
-          <div class="cell card" style="padding:12px">
-            <div class="tiny">Players</div>
-            <div><span id="online">—</span>/<span id="max">—</span></div>
-          </div>
-          <div class="cell card" style="padding:12px">
-            <div class="tiny">Direct IP</div>
-            <div><code>YOUR.IP.HERE:30120</code></div>
+        <div style="font-weight:900">Quick Links</div>
+        <div class="grid" style="margin-top:12px">
+          <a class="card" style="text-decoration:none" href="https://real-lyfe-rp.tebex.io" target="_blank" rel="noopener">
+            <div style="font-weight:800">Tebex Server Store</div>
+            <div class="tiny">Packages, perks, and more</div>
+          </a>
+          <a class="card" style="text-decoration:none" href="https://real-lyfe-scripts.tebex.io" target="_blank" rel="noopener">
+            <div style="font-weight:800">Real Lyfe Scripts</div>
+            <div class="tiny">Custom resources & tools</div>
+          </a>
+          <div class="card">
+            <div style="font-weight:800">Direct Join</div>
+            <div class="tiny">Use F8: <code>connect cfx.re/join/5dv79z</code></div>
           </div>
         </div>
-        <div style="height:10px"></div>
-        <div class="tiny">If numbers don’t load in your browser, deploy the provided <code>server.js</code> or <code>status.php</code> proxy and change <code>STATUS_ENDPOINT</code> below.</div>
       </div>
     </section>
 
-    <section class="card" id="howto" style="margin-top:22px;">
-      <h3 style="margin:6px 0 8px">How to Join</h3>
-      <ol>
-        <li>Install FiveM on your PC.</li>
-        <li>Click <strong>Launch & Join</strong> above.</li>
-        <li>If it doesn’t open, press <kbd>F8</kbd> in FiveM and type <code>connect cfx.re/join/ABCD12</code>.</li>
-      </ol>
-      <p class="tiny">Tip: Bookmark this page so you can join faster next time.</p>
-    </section>
-
-    <div class="footer">© Real Lyfe RP</div>
+    <footer>© reallyferp.com · Real Lyfe RP</footer>
   </div>
 
   <script>
-    // ------- Replace this if you deploy a proxy (server.js or status.php) -------
-    // Browser direct fetch (may fail due to CORS). Works if allowed by your host:
-    const DIRECT_INFO = "http://YOUR.IP.HERE:30120/info.json";
-    const DIRECT_PLAYERS = "http://YOUR.IP.HERE:30120/players.json";
-
-    // If you deploy a proxy, set e.g. const STATUS_ENDPOINT = "/status.json" or "/status.php"
-    const STATUS_ENDPOINT = null;
-
-    async function fetchStatus() {
-      try {
-        let hostname, max, online;
-        if (STATUS_ENDPOINT) {
-          const r = await fetch(STATUS_ENDPOINT, {cache:'no-store'});
-          const s = await r.json();
-          if (s.error) throw new Error("offline");
-          hostname = s.hostname || "Server";
-          max = s.max || null;
-          online = s.online || 0;
-        } else {
-          const [infoRes, playersRes] = await Promise.all([
-            fetch(DIRECT_INFO, {cache:'no-store'}),
-            fetch(DIRECT_PLAYERS, {cache:'no-store'})
-          ]);
-          const info = await infoRes.json();
-          const players = await playersRes.json();
-          hostname = info?.vars?.sv_hostname || "Server";
-          max = info?.vars?.sv_maxClients || null;
-          online = Array.isArray(players) ? players.length : 0;
-        }
-
-        document.getElementById('hostname').textContent = hostname;
-        document.getElementById('max').textContent = max ?? '—';
-        document.getElementById('online').textContent = online;
-        document.getElementById('statusLine').textContent = online>0 ? 'Online' : 'Online (0)';
-      } catch (e) {
-        document.getElementById('statusLine').textContent = 'Offline';
-      }
-    }
-    fetchStatus();
-    setInterval(fetchStatus, 10000);
-
-    // Fallback help reveal if protocol was blocked
-    const reveal = () => setTimeout(() => {
-      const el = document.getElementById('fivemHelp');
-      if (el) el.style.display = 'block';
-    }, 1500);
+    const reveal = () => setTimeout(() => { const el = document.getElementById('fivemHelp'); if(el) el.style.display='block'; }, 1400);
     document.getElementById('joinLink').addEventListener('click', reveal);
     document.getElementById('joinLink2').addEventListener('click', reveal);
-
-    // Copy F8 command
-    document.getElementById('copyF8').addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText('connect cfx.re/join/ABCD12');
-        const b = document.getElementById('copyF8');
-        const old = b.textContent;
-        b.textContent = 'Copied!';
-        setTimeout(() => b.textContent = old, 1200);
-      } catch (e) {}
-    });
+    document.getElementById('copyF8').addEventListener('click', async () => { try { await navigator.clipboard.writeText('connect cfx.re/join/5dv79z'); const b=document.getElementById('copyF8'); const old=b.textContent; b.textContent='Copied!'; setTimeout(()=>b.textContent=old,1200); } catch(e){} });
   </script>
 </body>
 </html>
