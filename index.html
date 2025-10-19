@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UGL + Real Lyfe RP — Official Site</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --muted:#9fb3c8; --text:#eaf2ff;
+  --teal:#00e0c3; --blue:#00a2ff; --gold:#ffd84a;
+  --card: rgba(10,18,35,.78); --edge: rgba(255,255,255,.12);
+  --good:#22c55e; --bad:#ef4444;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; color:var(--text); font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background:#060b10;
+  overflow-x:hidden;
+}
+
+/* Hero with graffiti */
+.hero{
+  position:relative; min-height: 92vh; display:flex; align-items:center; justify-content:center;
+  padding: clamp(22px, 4vw, 56px);
+  background: url('https://i.imgur.com/7So38W2_d.jpeg') center/cover no-repeat fixed;
+}
+.hero::after{
+  content:""; position:absolute; inset:0;
+  background: radial-gradient(1200px 800px at 50% 20%, rgba(0,0,0,.35), transparent 60%),
+              linear-gradient(180deg, rgba(6,11,18,.65), rgba(6,11,18,.85) 40%, rgba(6,11,18,.92));
+}
+.wrap{ width:min(1160px, 94vw); margin:auto; position:relative; z-index:2; }
+
+/* Gradient title with pulse glow */
+.title{
+  font-family:'Chakra Petch',sans-serif;
+  font-size: clamp(36px, 5.2vw, 64px);
+  font-weight: 800; margin:0 0 10px;
+  background: linear-gradient(90deg, var(--teal), var(--blue), var(--gold));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  text-shadow: 0 0 18px rgba(0, 224, 195, .25);
+  position:relative;
+}
+.title::after{
+  content:""; position:absolute; inset:-6px -10px; z-index:-1; border-radius:20px;
+  background: radial-gradient(600px 180px at 50% 60%, rgba(0,226,195,.18), transparent 60%),
+              radial-gradient(400px 160px at 20% 20%, rgba(255,216,74,.12), transparent 60%);
+  filter: blur(12px);
+  animation: pulse 4.5s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{ opacity:.55; transform: scale(1) }
+  50%{ opacity:.9; transform: scale(1.03) }
+}
+
+.subtitle{ color: var(--muted); font-size: clamp(16px, 2vw, 20px); max-width: 900px; margin: 8px 0 16px }
+
+.actions{ display:flex; gap:12px; flex-wrap:wrap; margin: 12px 0 6px }
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:14px 18px; border-radius:14px; border:1px solid var(--edge); font-weight:900;
+  text-decoration:none; box-shadow: 0 12px 28px rgba(0,0,0,.35);
+}
+.btn.join{ background: linear-gradient(180deg, var(--teal), var(--blue)); color:#041416 }
+.btn.copy{ background: linear-gradient(180deg, #fff3a3, var(--gold)); color:#1d1605 }
+.btn.ghost{ background: transparent; color:#d7eaff }
+
+.card{
+  background: var(--card);
+  border:1px solid var(--edge);
+  border-radius:16px; padding:18px;
+  box-shadow: 0 20px 44px rgba(0,0,0,.35);
+}
+
+.grid{ display:grid; gap:16px }
+.cols-2{ grid-template-columns: 1fr 1fr }
+.cols-3{ grid-template-columns: repeat(3, 1fr) }
+@media (max-width: 900px){ .cols-2, .cols-3 { grid-template-columns: 1fr } }
+
+.kbd{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background:#0a1422; border:1px solid #17364a; border-radius:8px; padding:.2em .5em; color:#cfe8ff
+}
+
+/* Status widget */
+.status .item{ background:#0a1524; border:1px solid var(--edge); border-radius:12px; padding:12px }
+.status .lbl{ color:var(--muted); font-size:14px }
+.status .num{ font-family:'Chakra Petch',sans-serif; font-size:28px }
+.online{ color:var(--good); font-weight:800 } .offline{ color:var(--bad); font-weight:800 }
+
+.section{ padding: 44px 0 }
+.footer{ color:#96aec6; text-align:center; padding:30px 0; border-top:1px solid var(--edge) }
+a.link{ color:#8feaff; text-decoration:none }
+a.link:hover{ filter:brightness(1.15) }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <h1 class="title">UGL + Real Lyfe RP</h1>
+    <p class="subtitle">
+      Serious role‑play • Balanced economy • Player‑elected Mayors (junior admins) • Governor (senior admin) • President (owner) & Vice President (co‑owner).
+      We also offer approved monthly <b>exclusive businesses</b> that can earn <b>real‑world payouts</b> — never pay‑to‑win.
+    </p>
+
+    <div class="actions">
+      <a class="btn join" href="fivem://connect/cfx.re/join/5dv79z">Launch & Join</a>
+      <a class="btn copy" href="#" id="copyF8">Copy F8 Command</a>
+      <a class="btn ghost" href="https://discord.gg/v4arJ8FFqG" target="_blank" rel="noopener">Join Discord</a>
+      <a class="btn ghost" href="https://real-lyfe-rp.tebex.io" target="_blank" rel="noopener">Tebex: Server Store</a>
+      <a class="btn ghost" href="https://real-lyfe-scripts.tebex.io" target="_blank" rel="noopener">Tebex: Scripts</a>
+    </div>
+
+    <div class="card" style="margin-top:14px; max-width: 620px">
+      <h3 style="margin:6px 0 10px">Live Server Status</h3>
+      <div class="grid cols-2 status">
+        <div class="item"><div class="lbl">Players</div><div class="num" id="players">—</div></div>
+        <div class="item"><div class="lbl">Queue</div><div class="num" id="queue">—</div></div>
+        <div class="item"><div class="lbl">Status</div><div class="num online" id="uptime">Checking…</div></div>
+        <div class="item"><div class="lbl">Join</div><div class="num">cfx.re/join/5dv79z</div></div>
+      </div>
+      <div style="color:var(--muted); font-size:14px; margin-top:8px">Auto-refreshes every 30s via cfx API.</div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="section">
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>About the City</h3>
+        <p style="color:var(--muted)">Modern RP built for long‑form characters, organized crews, and cinematic scenes. Phones, socials, housing, garages, realistic inventory/damage and more.</p>
+      </div>
+      <div class="card">
+        <h3>Economy</h3>
+        <p style="color:var(--muted)">Dynamic prices & taxes, utilities, loans, credit score, imports, crafting, and player‑owned businesses with real branding support.</p>
+      </div>
+      <div class="card">
+        <h3>Law & Order</h3>
+        <p style="color:var(--muted)">PD, EMS, DOJ with penal code, MDT, warrants, investigations, court, realistic pursuits. Crime sandbox: robberies, hacking, drugs, boosting, heists & racing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Government & Staff</h3>
+        <ul style="margin:8px 0 0 18px; color:var(--muted)">
+          <li><b>President</b> — Owner (final decisions)</li>
+          <li><b>Vice President</b> — Co‑Owner</li>
+          <li><b>Governor</b> — Senior Admin (policy & staff)</li>
+          <li><b>Mayors</b> — Junior Admins <u>elected by players</u></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Exclusive Business Program</h3>
+        <p style="color:var(--muted)">Limited monthly slots. Transparent rev‑share (cosmetic/QoL only). Community‑first scenes & jobs. Compliance with KYC/tax where applicable.</p>
+        <div class="actions">
+          <a class="btn copy" href="https://discord.gg/v4arJ8FFqG" target="_blank" rel="noopener">Apply on Discord</a>
+          <a class="btn ghost" href="https://real-lyfe-rp.tebex.io" target="_blank" rel="noopener">Open Tebex</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Content Creator & Streamer Ready</h3>
+        <ul style="margin:8px 0 0 18px; color:var(--muted)">
+          <li>Media roles, scene coordination, and promo</li>
+          <li>Stream‑safe rules, fast staff response live</li>
+          <li>Feature Friday — showcase best clips</li>
+          <li>Cinematic presets for OBS</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>How to Join</h3>
+        <ol style="margin:8px 0 0 18px; color:var(--muted)">
+          <li>Join <a class="link" href="https://discord.gg/v4arJ8FFqG" target="_blank" rel="noopener">Discord</a> & read #start‑here</li>
+          <li>Submit Whitelist Application</li>
+          <li>Orientation → meet the city</li>
+          <li>Open FiveM: <span class="kbd">fivem://connect/cfx.re/join/5dv79z</span> or F8 → <span class="kbd">connect cfx.re/join/5dv79z</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  © <script>document.write(new Date().getFullYear())</script> UGL + Real Lyfe RP • reallyferp.com
+</footer>
+
+<script>
+// Copy F8 command
+const F8 = "connect cfx.re/join/5dv79z";
+document.getElementById("copyF8").addEventListener("click", async (e)=>{
+  e.preventDefault();
+  try{
+    await navigator.clipboard.writeText(F8);
+    const el = e.currentTarget;
+    const old = el.textContent;
+    el.textContent = "Copied ✓";
+    setTimeout(()=> el.textContent = old, 1200);
+  }catch(err){ alert(F8); }
+});
+
+// Live status via cfx API
+async function loadStatus(){
+  const P = document.getElementById("players");
+  const Q = document.getElementById("queue");
+  const U = document.getElementById("uptime");
+  try{
+    const res = await fetch("https://servers-frontend.fivem.net/api/servers/single/5dv79z", {cache:"no-store"});
+    if(!res.ok) throw new Error("HTTP "+res.status);
+    const data = await res.json();
+    const d = data.Data || data;
+    const players = d?.clients ?? 0;
+    const max = d?.sv_maxclients ?? d?.sv_maxClients ?? d?.maxPlayers ?? 0;
+    const queue = d?.queue ?? d?.queuedPlayers ?? 0;
+    P.textContent = max ? players + " / " + max : String(players);
+    Q.textContent = String(queue);
+    U.textContent = "Online"; U.className = "online";
+  }catch(e){
+    U.textContent = "Check"; U.className = "offline";
+  }
+}
+loadStatus(); setInterval(loadStatus, 30000);
+</script>
+</body>
+</html>
